@@ -32,7 +32,7 @@ import { Link } from 'react-router-dom'
 
 const Home = () => {
   return (
-    <div className="home">Hey
+    <div className="home">
     <div className="posts">
       {posts.map(post => (
         <div className="post"  key={post.id}>

@@ -1,4 +1,4 @@
-$purple : #2b0c59;
+$blue : #120fcd;
 
 .app{
     display: flex;
@@ -14,11 +14,11 @@ $purple : #2b0c59;
             align-items: center;
             justify-content: center;
             height: 100vh;
-            background-color: $purple;
+            background-color: $blue;
 
             h1{
                 font-size: 20px;
-                color: teal;
+                color: $blue;
                 margin-bottom: 20px;
                 display: flex;
                 align-items: center;
@@ -43,7 +43,7 @@ $purple : #2b0c59;
             button{
                 padding: 10px;
                 border: none;
-                background-color: teal;
+                background-color: $blue;
                 color: white;
                 cursor: pointer;
             }
@@ -79,7 +79,7 @@ $purple : #2b0c59;
                 width: 100px;
                 align-items: center;
 
-                
+
             }
 
             .links{
@@ -100,7 +100,7 @@ $purple : #2b0c59;
                 }
 
                 .write{
-                    background-color: $purple;
+                    background-color: $blue;
                     width: 50px;
                     height: 50px;
                     border-radius: 50%;
@@ -109,11 +109,12 @@ $purple : #2b0c59;
                     justify-content: center;
                     font-weight: 300;
                     border: 1px solid white;
+                    color: white;
     
                     &:hover{
-                        color: $purple;
+                        color: white;
                         background-color:white;
-                        border: 1px solid $purple;
+                        border: 1px solid $blue;
                     }
             }
 
@@ -167,7 +168,7 @@ $purple : #2b0c59;
                             content: "";
                             width: 100%;
                             height: 100%;
-                            background-color: $purple;
+                            background-color: $blue;
                             position: absolute;
                             top: 20px;
                             left: 20px;
@@ -201,12 +202,12 @@ $purple : #2b0c59;
                             border: none;
                             cursor: pointer;
                             background-color: white;
-                            border: 1px solid $purple;
-                            color: $purple;
+                            border: 1px solid $blue;
+                            color: $blue;
 
                             &:hover{
                                 border: 1px solid white;
-                                background-color: $purple;
+                                background-color: $blue;
                                 color: white;
                             }
 
@@ -306,18 +307,104 @@ $purple : #2b0c59;
                             border: none;
                             cursor: pointer;
                             background-color: white;
-                            border: 1px solid $purple;
-                            color: $purple;
+                            border: 1px solid $blue;
+                            color: $blue;
 
                             &:hover{
                                 border: 1px solid white;
-                                background-color: $purple;
+                                background-color: $blue;
                                 color: white;
                             }
                         }
                     }
                 }
             
+        }
+
+        //WRITE
+
+        .add{
+            margin-top: 20px;
+            display: flex;
+            gap: 20px;
+
+            .content{
+                flex: 5;
+                display: flex;
+                flex-direction: column;
+                gap: 20px;
+
+                input{
+                    padding: 10px;
+                    border: 1px solid lightgray;
+                }
+
+                .editorContainer{
+                    height: 300px;
+                    overflow: scroll;
+
+                    .editor{
+                        height: 100%;
+                        border: none;
+                        border: 1px solid lightgray;
+                    }
+                }
+            }
+
+            .menu{
+                flex: 2;
+                display: flex;
+                flex-direction: column;
+                gap: 20px;
+
+                .item{
+                   
+                    border: 1px solid lightgray;
+                    padding: 10px;
+                    flex: 1;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-between;
+                    font-size: 12px;
+                    color: #555;
+
+                    h1{
+                        font-size: 20px;
+                    }
+
+                    label{
+                        text-decoration: underline;
+                        cursor: pointer;
+                    }
+
+                    .buttons{
+                        display: flex;
+                        justify-content: space-between;
+
+                        :first-child{
+                            cursor: pointer;
+                            color: $blue;
+                            background-color: white;
+                            border: 1px solid $blue;
+                            padding: 3px 5px;
+                        }
+                        :last-child{
+                            cursor: pointer;
+                            color: white;
+                            background-color: $blue;
+                            border: 1px solid $blue;
+                            padding: 3px 5px;
+                        }
+                    }
+
+                    .cat{
+                        display: flex;
+                        align-items: center;
+                        gap: 2px;
+                        color: $blue;
+                    }
+                }
+            }
         }
     }
 }
